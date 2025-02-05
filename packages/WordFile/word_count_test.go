@@ -43,7 +43,7 @@ func TestConcurrentCount_AnyFileType(t *testing.T) {
 // TestConcurrentCount_MixedFiles checks WordCount with a mix of valid and invalid files
 func TestConcurrentCount_MixedFiles(t *testing.T) {
 	// files contains a mix of valid and invalid files (e.g., .txt and .md)
-	files := []string{ "files/file3.docx"}
+	files := []string{"files/file1.txt", "files/file3.md", "files/file3.docx"}
 	err := ConcurrentCount(files)
 	assert.NoError(t, err, "Expected no error, invalid files should be handled by logs")
 }
