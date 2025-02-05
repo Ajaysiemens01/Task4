@@ -31,7 +31,7 @@ func TestConcurrentCount_FileWithNoWords(t *testing.T) {
 	assert.EqualError(t, err, expectedError, "Expected error because no words were found in the file")
 }
 
-// TestConcurrentCount_AnyFileType checks WordCount with a file of any type (non-text, e.g., image or PDF)
+// TestConcurrentCount_AnyFileType checks WordCount with a file of any type
 func TestConcurrentCount_AnyFileType(t *testing.T) {
 	// Assuming file5.pdf is a PDF, this test is to check if the file type is handled properly
 	files := []string{"files/file3.md"}
@@ -40,7 +40,7 @@ func TestConcurrentCount_AnyFileType(t *testing.T) {
 	assert.NoError(t, err, "Expected no error, logs should handle non-text files")
 }
 
-// TestConcurrentCount_MixedFiles checks WordCount with a mix of valid and invalid files
+// TestConcurrentCount_MixedFiles checks WordCount with a mix of files
 func TestConcurrentCount_MixedFiles(t *testing.T) {
 	// files contains a mix of valid and invalid files (e.g., .txt and .md)
 	files := []string{"files/file1.txt", "files/file3.md", "files/file3.docx"}
