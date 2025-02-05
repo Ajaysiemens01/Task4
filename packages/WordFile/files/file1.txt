@@ -1,0 +1,3 @@
+Hello, this is a sample text file1.
+You can write any words you want here.
+This is just an example.
