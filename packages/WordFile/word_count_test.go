@@ -41,6 +41,8 @@ func TestConcurrentCount_AnyFileType(t *testing.T) {
 }
 
 // TestConcurrentCount_MixedFiles checks WordCount with a mix of files
+//Word docx gies you  wierd words because scanner doesnot extract inner text in word file to do that 
+//we use unoffice library
 func TestConcurrentCount_MixedFiles(t *testing.T) {
 	// files contains a mix of valid and invalid files (e.g., .txt and .md)
 	files := []string{"files/file1.txt", "files/file3.md", "files/file3.docx"}

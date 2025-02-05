@@ -89,8 +89,6 @@ func ConcurrentCount(files []string) error {
 
 	// Process each file concurrently
 	for _, fileName := range files {
-
-
 		wg.Add(1)
 		go func(file string) {
 			defer wg.Done()
